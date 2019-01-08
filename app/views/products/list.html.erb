@@ -1,6 +1,7 @@
 <div class="container">
   <div class="text-center">
     <h2>Bienvenides</h2>
+
   </div>
   <div class="row">
     <% @products.each do |product| %>
@@ -12,6 +13,14 @@
           <h5 class="card-title"><%= product.name %></h5>
           <p class="card-text"><%= product.description %></p>
           <a href="#" class="btn btn-success text-white btn-lg">Comprar</a>
+
+          
+          <%= link_to({ controller: 'products', action: 'list' }) do %>
+              <button class="btn btn-success text-white btn-lg">ComprarTest</button>
+          <% end %>
+
+
+
         </div>
       </div>
     </div>

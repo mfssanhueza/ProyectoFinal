@@ -2,8 +2,10 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
   before_action :list_products, only: %i[index list]
 
+
   # GET /products
   # GET /products.json
+
   def index; end
 
   def list; end
@@ -65,6 +67,11 @@ class ProductsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def list_products
+    if !(defined? @items_comprados)
+      @items_comprados = 0
+    else
+        @items_comprados = 2
+    end
     @products = Product.all
   end
 
