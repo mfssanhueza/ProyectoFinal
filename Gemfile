@@ -7,6 +7,7 @@ ruby '2.4.1'
 gem 'devise'
 gem 'faker', group: :development
 gem 'rails', '~> 5.2.2'
+gem 'cancancan', '~> 2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
